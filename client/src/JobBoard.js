@@ -7,8 +7,7 @@ export const JobBoard = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const jobs = await loadJobs();
-      setJobs(jobs);
+      setJobs(await loadJobs());
     };
     fetchData();
   }, []);
